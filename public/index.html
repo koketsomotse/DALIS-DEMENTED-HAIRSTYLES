@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/IMG_5224.jpeg" type="image/jpeg">
   </head>
   <body>
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -41,7 +42,7 @@
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
 				<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
 				<li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
 				<li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
@@ -60,7 +61,7 @@
           	<div class="icon">
 	          	<span class="flaticon-lotus"></span>
           	</div>
-            <h1>Hair Beauty Center</h1>
+            <h2>Dalis Demented Hairstyles Hair Beauty Center</h2>
             <div class="row justify-content-center">
 	            <div class="col-md-7 mb-3">
 	            	<p>Unleash Your Inner Glamour at Hair Beauty Center – Where Every Strand Tells a Story!</p>
@@ -272,6 +273,10 @@
 			transform: translateX(-100%);
 		}
 	}
+
+  .nav-link.active {
+    color: #ff69b4 !important; /* Highlight active link */
+  }
 </style>
 			  
 	  <section class="ftco-section">
@@ -860,7 +865,7 @@
 			</div>
 			
 			<div class="col-md-3 ftco-animate">
-				<a href="images/WhatsAppImage2025-01-24at08.53.423.jpeg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/WhatsAppImage2025-01-24at08.53.423.jpeg);">
+				<a href="images/IMG_5224ljnljk.jpeg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/WhatsAppImage2025-01-24at08.53.423.jpeg);">
 					<div class="icon mb-4 d-flex align-items-center justify-content-center">
 					<span class="icon-plus"></span>
 				</div>
@@ -1043,7 +1048,8 @@
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 60) {
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 60 && pageYOffset < sectionTop + sectionHeight - 60) {
           current = section.getAttribute('id');
         }
       });
