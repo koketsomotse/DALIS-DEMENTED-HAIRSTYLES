@@ -129,65 +129,53 @@
 			</div>
 		</section>
     
-    <section id="pricing" class="ftco-section">
-    	<div class="container-fluid px-md-5">
-    		<div class="row">
-    			<div class="col-md-6 col-lg-3">
-						<div class="services text-center ftco-animate">
-							<div class="icon d-flex justify-content-center align-items-center moving-image" style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden;">
-								<img src="images/WhatsAppImage2025-01-24at08.44.16.jpeg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;">
-							  </div>
-							  
-							  
-							<div class="text mt-3">
-								<h3>Pondo</h3>
-								
-							</div>
-						</div>
-					</div>
+		<section id="pricing" class="ftco-section">
+			<div class="container-fluid px-md-5">
+				<div class="row moving-images-container">
 					<div class="col-md-6 col-lg-3">
-						<div class="services text-center ftco-animate">
-							<div class="icon d-flex justify-content-center align-items-center moving-image" style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden;">
-								<img src="images/WhatsAppImage2025-01-24at08.56.30.jpeg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;">
-							  </div>
-							  
-							  
-							<div class="text mt-3">
-								<h3>Straight Back</h3>
-								
+							<div class="services text-center ftco-animate">
+								<div class="icon d-flex justify-content-center align-items-center" style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden;">
+									<img src="images/WhatsAppImage2025-01-24at08.44.16.jpeg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;">
+								  </div>
+								  <div class="text mt-3">
+									<h3>Pondo</h3>
+								  </div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="services text-center ftco-animate">
+								<div class="icon d-flex justify-content-center align-items-center" style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden;">
+									<img src="images/WhatsAppImage2025-01-24at08.56.30.jpeg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;">
+								  </div>
+								  <div class="text mt-3">
+									<h3>Straight Back</h3>
+								  </div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="services text-center ftco-animate">
+								<div class="icon d-flex justify-content-center align-items-center" style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden;">
+									<img src="images/WhatsAppImage2025-01-24 at08.56.43(3).jpeg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;">
+								  </div>
+								  <div class="text mt-3">
+									<h3>Men Styling</h3>
+								  </div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="services text-center ftco-animate">
+								<div class="icon d-flex justify-content-center align-items-center" style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden;">
+									<img src="images/WhatsAppImage2025-01-24at08.53.39(1).jpeg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;">
+								  </div>
+								  <div class="text mt-3">
+									<h3>Kiddies</h3>
+								  </div>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3">
-						<div class="services text-center ftco-animate">
-							<div class="icon d-flex justify-content-center align-items-center moving-image" style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden;">
-								<img src="images/WhatsAppImage2025-01-24 at08.56.43(3).jpeg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;">
-							  </div>
-							  
-							  
-							<div class="text mt-3">
-								<h3>Men Styling</h3>
-								
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<div class="services text-center ftco-animate">
-							<div class="icon d-flex justify-content-center align-items-center moving-image" style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden;">
-								<img src="images/WhatsAppImage2025-01-24at08.53.39(1).jpeg" alt="Icon" style="width: 100%; height: 100%; object-fit: cover;">
-							  </div>
-							  
-							  
-							<div class="text mt-3">
-								<h3>Kiddies</h3>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-    	</div>
-    </section>
-
+			</div>
+		</section>
+	
 	  <section class="ftco-section">
 	  	<div class="container-fluid px-md-5">
 	  		<div class="row justify-content-center mb-5 pb-3">
@@ -906,6 +894,27 @@
         transform: translateX(0);
       }
     }
+
+	.moving-images-container {
+		display: flex;
+		overflow: hidden;
+		white-space: nowrap;
+		animation: moveImages 20s linear infinite;
+	  }
+	
+	  .moving-images-container > div {
+		display: inline-block;
+		white-space: normal;
+	  }
+	
+	  @keyframes moveImages {
+		0% {
+		  transform: translateX(0);
+		}
+		100% {
+		  transform: translateX(-100%);
+		}
+	  }
   </style>
 
   <script>
