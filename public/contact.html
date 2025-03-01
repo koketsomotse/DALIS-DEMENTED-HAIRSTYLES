@@ -20,6 +20,61 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/pics/IMG_5224ljnljk.png" type="image/jpeg">
+    <style>
+      /* Responsive design improvements */
+      @media (max-width: 768px) {
+        .navbar-brand img {
+          height: 30px;
+        }
+        .hero-wrap {
+          background-position: center;
+        }
+        .contact-info p {
+          font-size: 14px;
+        }
+        .contact-info {
+          margin-bottom: 20px;
+        }
+        .contact-info h2 {
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 576px) {
+        .navbar-brand img {
+          height: 25px;
+        }
+        .hero-wrap {
+          background-position: center;
+        }
+        .contact-info p {
+          font-size: 12px;
+        }
+        .contact-info h2 {
+          font-size: 16px;
+        }
+      }
+
+      #scrollToTopBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: #ff69b4; /* Set a pink background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        width: 50px; /* Set width */
+        height: 50px; /* Set height */
+        border-radius: 50%; /* Rounded corners to make it circular */
+        font-size: 24px; /* Increase font size for the arrow */
+      }
+
+      #scrollToTopBtn:hover {
+        background-color: #ff1493; /* Add a darker pink background on hover */
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -44,7 +99,7 @@
     </nav>
     <!-- END nav -->
 
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -79,7 +134,7 @@
           <div class="col-md-6 ftco-animate text-center">
             <p>
               <a href="https://wa.me/message/5GH4MQSBMWTIE1" target="_blank" class="btn btn-primary p-3 px-5 py-4 mr-md-2">Book a Session</a>
-              <a href="#" target="_blank" class="btn btn-outline-primary p-3 px-5 py-4 ml-md-2">Contact</a>
+
             </p>
           </div>
         </div>
@@ -132,6 +187,30 @@
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">&#8679;</button>
+
+    <script>
+      // Get the button
+      let mybutton = document.getElementById("scrollToTopBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>

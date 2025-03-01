@@ -9409,6 +9409,67 @@ textarea.form-control {
 
 /* Blog*/
 .post-info {
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 30px;
+  }
+  .hero-wrap {
+    background-position: center;
+  }
+  .ftco-intro .img {
+    height: 200px;
+  }
+  .offer-deal .img {
+    height: 150px;
+  }
+  .moving-images-container, .moving-images-container-left {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .services .icon {
+    width: 120px;
+    height: 120px;
+  }
+  .treatment .icon {
+    width: 40%;
+    height: 40%;
+  }
+  .contact-info p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 25px;
+  }
+  .hero-wrap {
+    background-position: center;
+  }
+  .ftco-intro .img {
+    height: 150px;
+  }
+  .offer-deal .img {
+    height: 100px;
+  }
+  .moving-images-container, .moving-images-container-left {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .services .icon {
+    width: 100px;
+    height: 100px;
+  }
+  .treatment .icon {
+    width: 30%;
+    height: 30%;
+  }
+  .contact-info p {
+    font-size: 12px;
+  }
+}
   font-size: 12px;
   text-transform: uppercase;
   font-weight: bold;
