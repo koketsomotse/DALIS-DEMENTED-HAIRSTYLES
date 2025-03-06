@@ -9412,6 +9412,144 @@ textarea.form-control {
 
 /* Blog*/
 .post-info {
+}
+
+/* ...existing code... */
+
+.moving-images-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: moveImages 20s linear infinite;
+}
+
+@keyframes moveImages {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.moving-images-container-left {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: moveImagesLeft 10s linear infinite; /* Adjusted speed */
+  justify-content: center;
+}
+
+@keyframes moveImagesLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.icon {
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-link.active {
+  color: #ff69b4 !important; /* Highlight active link */
+}
+
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #ff69b4; /* Set a pink background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  width: 50px; /* Set width */
+  height: 50px; /* Set height */
+  border-radius: 50%; /* Rounded corners to make it circular */
+  font-size: 24px; /* Increase font size for the arrow */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #ff1493; /* Add a darker pink background on hover */
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 30px;
+  }
+  .hero-wrap {
+    background-position: center;
+  }
+  .ftco-intro .img {
+    height: 200px;
+  }
+  .offer-deal .img {
+    height: 150px;
+  }
+  .moving-images-container, .moving-images-container-left {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .services .icon {
+    width: 120px;
+    height: 120px;
+  }
+  .treatment .icon {
+    width: 40%;
+    height: 40%;
+  }
+  .contact-info p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 25px;
+  }
+  .hero-wrap {
+    background-position: center;
+  }
+  .ftco-intro .img {
+    height: 150px;
+  }
+  .offer-deal .img {
+    height: 100px;
+  }
+  .moving-images-container, .moving-images-container-left {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .services .icon {
+    width: 100px;
+    height: 100px;
+  }
+  .treatment .icon {
+    width: 30%;
+    height: 30%;
+  }
+  .contact-info p {
+    font-size: 12px;
+  }
+}
 
 /* Custom image size */
 .custom-img-size {
